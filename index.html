@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Responsive Image</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+  .responsive-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Desktop version image shown by default */
+  #desktopImage {
+    display: block;
+  }
+  #mobileImage {
+    display: none;
+  }
+
+  /* On screens smaller than or equal to 768px, show mobile image and hide desktop image */
+  @media (max-width: 768px) {
+    #desktopImage {
+      display: none;
+    }
+    #mobileImage {
+      display: block;
+    }
+  }
+</style>
+</head>
+<body>
+  <img id="desktopImage" class="responsive-image" src="desktop-image.png" alt="Desktop Image" />
+  <img id="mobileImage" class="responsive-image" src="mobile-image.png" alt="Mobile Image" />
+
+  <!-- No extra JavaScript needed for basic functionality -->
+</body>
+</html>
